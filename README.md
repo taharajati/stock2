@@ -35,7 +35,7 @@ This is a full-stack authentication system using Google OAuth 2.0 for EasyVest.i
    GOOGLE_CLIENT_SECRET=your-google-client-secret
    SESSION_SECRET=your-session-secret-key-here
    FRONTEND_URL=https://easyvest.ir
-   PORT=5000
+   PORT=5003
    ```
 
 ## Running the Application

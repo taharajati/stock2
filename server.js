@@ -35,7 +35,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID || '1050931480482-fnsr61l0rikucgs03jfojgg6tc4kbnjm.apps.googleusercontent.com',
     clientSecret: process.env.GOOGLE_CLIENT_SECRET || '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',
-    callbackURL: "/auth/google/callback",
+    callbackURL: "http://localhost:5003/auth/google/callback",
     scope: ['profile', 'email']
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -90,7 +90,7 @@ app.get('/auth/logout', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5003;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 }); 
